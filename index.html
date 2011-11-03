@@ -112,13 +112,13 @@ margin:10px
 }
 ul li {
 font-weight:bold;
-list-style:inside disc url(/cfremotetree/ext-3.3.0/resources/images/default/tree/folder-open.gif);
+list-style:inside disc url(/cfremotetree/ext-3.4.0/resources/images/default/tree/folder-open.gif);
 margin-bottom:6px;
 padding-left:5px
 }
 ul li.file {
 font-weight:normal;
-list-style:inside disc url(/cfremotetree/ext-3.3.0/resources/images/default/tree/leaf.gif)
+list-style:inside disc url(/cfremotetree/ext-3.4.0/resources/images/default/tree/leaf.gif)
 }
 dl {
 margin-bottom:18px
@@ -169,15 +169,15 @@ color:#EEE
       <p>I put this demo together for my fellow ColdFusion designers who, like me, have struggled to implement <strong>ExtJS</strong>, Saki's <strong>Ext.ux.tree.RemoteTreePanel</strong> extension and Joe Celko's <strong>Nested Set database model</strong> to represent tree-structured data in a CF environment. I've spent many hours researching and testing, and I've found very little clear documentation or examples of  how and what to do when it comes to the backend... particularly when you're talking about CF.  I'm hoping that by sharing my efforts, it will inspire others to do the same.  Maybe you'll even improve on what I've done... I've definitely left room for it.  =]</p>
       <p>A word about my development environment: I use<strong> Adobe ColdFusion 8</strong> with a <strong>Microsoft SQL Server 2008</strong> DB. This is the environment I use at work, so I do all of my development under this setup to reduce the need to maintain multiple environments. Unfortunately, since I don't use any other DB servers, I'm unable to help those of you with different setups. However, if you are on an earlier, later or alternate CFML engine, you should be fine.  (I think... again, I can't test it, but let me know how it works for you). If you happen to be running another flavor of scripting language, I suggest you look at the additional resources at the bottom of this page. The <strong>nstrees library</strong> was a great help, especially in figuring out the node move logic. If you're ambitious and want to contribute to this demo, please feel free to email me.</p>
       <p>I've purposely simplified the processing code for this demo to make it relatively easy to understand the database logic. There is plenty of room to enhance,  harden, optimize, secure, streamline, and so on. I'll leave that up to you. Remember, the purpose of this demo is to give you some basic tools to help you learn to implement this code in your own environment, not hand you a drop-in solution.</p>
-      <p><strong>Chris Chain | <em>sirveloz [at] gmail [dot] com</em></strong></p>
+      <p><strong>Chris Chain | <em>sirveloz [at] gmail [dot] com</em> | <em>@_chrischain</em></strong></p>
       <h2>SETUP</h2>
       <ol>
         <li>Unzip this archive into the web root of your CF server. If you are using the built-in CF server, it should be C:\ColdFusion9\wwwroot. You should now have a folder called <strong>/cfremotetree</strong> in the root of your webserver.</li>
-        <li>Download and unzip <strong>ExtJS 3.3.0</strong> into <strong>/cfremotetree</strong>. There is a link to download the package in the credits section below. Your webroot should now contain the following files and folders:<br />
+        <li>Download and unzip <strong>ExtJS 3.4.0</strong> into <strong>/cfremotetree</strong>. There is a link to download the package in the credits section below. Your webroot should now contain the following files and folders:<br />
           <ul style="margin:16px 24px">
             <li>/cfremotetree</li>
             <ul>
-              <li>/ext-3.3.0</li>
+              <li>/ext-3.4</li>
               <ul>
                 <li><em>(all default install folders)</em></li>
                 <li class="file"><em>(all default install files)</em></li>
@@ -204,8 +204,8 @@ color:#EEE
       <h2>FINAL THOUGHTS</h2>
       <p>The sample data set is from the article <em>Storing Hierarchical Data in a Database</em> by Gijs Van Tulder. There is a link to it in the <strong>Additional Resources</strong> section at the bottom of the page. There are quite a few good resources out there to help you learn about storing tree data in a relational database. The nested set model works well for me, since I'm using it to manage a menu system for our website that only a handful of people will be updating fairly infrequently. In this case, I want the maximum performance efficiency to be on the SELECT side of the database query process, rather than on the INSERT/UPDATE/DELETE operations. If you expect your application will be heavy on the write side as opposed to the read, you may want to look into other tree representation models such as the <strong>Materialized Path</strong> database model. A Google search will yield plenty of information for you to exhaust yourself with.</p>
       <p>An associate of mine suggested that I include a generic open source license agreement to help support free software and ensure that everyone gets the credit they deserve for the work they do. I've licensed this work under the GNU LGPL, details are in the comments of the files I created. Personally, I want you to use this demo to help you create your own solution, not use this as production-ready source code. Like I stated above, it's simplified for educational purposes. I would never use this code in a production application without significant streamlining and security modifications.</p>
-      <p>Thanks for downloading and reading this, I hope it helps you. If you like this demo, find problems with it or you just want to contribute more code to it, please feel free to email me at sirveloz [at] gmail [dot] com.</p>
-      <p style="font-size:11px;color:#666"><strong>Ext.ux.tree.RemoteTreePanel</strong> is copyright 2008 Jozef Sakáloš. I have included a slightly modified version of his extension with this distribution for compatibility with ExtJS 3.3.0. The complete extension and documentation is available from the link in the <strong>Credits</strong> section below.</p>
+      <p>Thanks for downloading and reading this, I hope it helps you. If you like this demo, find problems with it or you just want to contribute more code to it, please feel free to email me or tweet me at the addresses above.</p>
+      <p style="font-size:11px;color:#666"><strong>Ext.ux.tree.RemoteTreePanel</strong> is copyright 2008 Jozef Sakáloš. I have included a slightly modified version of his extension with this distribution for compatibility with ExtJS 3.x. The complete extension and documentation is available from the link in the <strong>Credits</strong> section below.</p>
     </div>
   </div>
   <div id="footer">
