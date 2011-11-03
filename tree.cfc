@@ -2,9 +2,7 @@
 *
 *  APPLICATION: CFRemoteTree
 *  FILENAME: tree.cfc
-*	LastChangedBy: Chris Chain (sirveloz [at] gmail [dot] com)
-*	$LastChangedDate: 2011-03-25 11:13:25 -0700 (Fri, 25 Mar 2011) $
-*	$Revision: 19 $
+*	AUTHOR: Chris Chain (sirveloz [at] gmail [dot] com)
 *  DESCRIPTION: Processor component for CFRemoteTree
 *  COPYRIGHT: 2010 Chris Chain
 *  LICENSE: This file is part of cfremotetree.

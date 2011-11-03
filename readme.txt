@@ -1,8 +1,6 @@
 APPLICATION: CFRemoteTree
 FILENAME: readme.txt
-LastChangedBy: Chris Chain (sirveloz [at] gmail [dot] com)
-$LastChangedDate: 2010-11-10 22:37:33 -0800 (Wed, 10 Nov 2010) $
-$Revision: 16 $
+AUTHOR: Chris Chain (sirveloz [at] gmail [dot] com)
 DESCRIPTION: CFRemoteTree readme file
 COPYRIGHT: 2010 Chris Chain
 LICENSE: This file is part of cfremotetree.

@@ -2,9 +2,7 @@
 *
 *  APPLICATION: CFRemoteTree
 *  FILENAME: Application.cfm
-*	LastChangedBy: Chris Chain (sirveloz [at] gmail [dot] com)
-*	$LastChangedDate: 2010-11-10 22:25:56 -0800 (Wed, 10 Nov 2010) $
-*	$Revision: 14 $
+*	AUTHOR: Chris Chain (sirveloz [at] gmail [dot] com)
 *  DESCRIPTION: Basic application setup file
 *  COPYRIGHT: 2010 Chris Chain
 *  LICENSE: This file is part of cfremotetree.
