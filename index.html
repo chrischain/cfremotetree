@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!--
+*
+*  APPLICATION: CFRemoteTree
+*  FILENAME: index.html
+*	LastChangedBy: Chris Chain (sirveloz [at] gmail [dot] com)
+*	$LastChangedDate: 2010-11-10 22:37:33 -0800 (Wed, 10 Nov 2010) $
+*	$Revision: 16 $
+*  DESCRIPTION: CFRemoteTree main documentation file
+*  COPYRIGHT: 2010 Chris Chain
+*  LICENSE: This file is part of cfremotetree.
+*
+*  cfremotetree is free software: you can redistribute it and/or modify
+*  it under the terms of the Lesser GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  cfremotetree is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  Lesser GNU General Public License for more details.
+*
+*  You should have received a copy of the lesser GNU General Public License
+*  along with cfremotetree.  If not, see <http://www.gnu.org/licenses/>.
+*
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CFRemoteTree Demo Readme</title>
+<style type="text/css">
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+margin:0;
+padding:0
+}
+#header, #main, #content, #footer {
+display:block
+}
+body {
+background:#e5e5e5 -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(100,100,100)), color-stop(1, rgb(255,255,255)));
+background-image:-moz-linear-gradient(center bottom, rgb(100,100,100) 0%, rgb(255,255,255) 100%);
+color:#333;
+font:13px/1.231 arial, helvetica, clean, sans-serif;
+line-height:16px;
+text-align:center;
+}
+#wrapper {
+margin:0 auto;
+text-align:left;
+width:985px
+}
+#header {
+background-color:#191919;
+color:#FFF;
+margin-bottom:20px;
+-moz-border-radius-bottomleft:10px;
+-moz-border-radius-bottomright:10px;
+padding:20px;
+position:relative;
+text-align:left
+}
+#main {
+background:#FFF;
+margin:0 auto;
+-moz-border-radius-bottomleft:10px;
+-moz-border-radius-bottomright:10px;
+-moz-border-radius-topleft:10px;
+-moz-border-radius-topright:10px;
+overflow:hidden;
+text-align:left;
+width:985px
+}
+#content {
+float:right;
+padding:16px
+}
+#footer {
+background-color:#191919;
+color:#FFF;
+font-size:11px;
+margin:20px 0 -18px 0;
+-moz-border-radius-topleft:10px;
+-moz-border-radius-topright:10px;
+-moz-column-count:2;
+-moz-column-gap:20px;
+-moz-column-rule:1px solid #666;
+padding:20px;
+text-align:justify
+}
+h1, h2, h3 {
+clear:both;
+color:#000;
+font-weight:bold
+}
+a:link, a:visited {
+color:#189CDA;
+text-decoration:none
+}
+a:hover, a:active {
+text-decoration:underline
+}
+p {
+margin-bottom:16px
+}
+li {
+list-style:inside decimal;
+margin-bottom:8px;
+padding-left:5px
+}
+ul {
+margin:10px
+}
+ul li {
+font-weight:bold;
+list-style:inside disc url(/cfremotetree/ext-3.3.0/resources/images/default/tree/folder-open.gif);
+margin-bottom:6px;
+padding-left:5px
+}
+ul li.file {
+font-weight:normal;
+list-style:inside disc url(/cfremotetree/ext-3.3.0/resources/images/default/tree/leaf.gif)
+}
+dl {
+margin-bottom:18px
+}
+dt {
+color:#CCC;
+font-weight:bold
+}
+dd {
+margin:0 0 6px 12px
+}
+#header h1 {
+color:#68C2FF;
+font-size:30px;
+line-height:normal;
+margin-bottom:8px;
+padding-left:10px
+}
+#header p {
+color:#EEE;
+font-size:14px;
+padding-left:12px
+}
+#content h1, h2, h3 {
+color:#189CDA;
+line-height:1.5em;
+margin:0 20px 12px 0
+}
+#footer h2 {
+color:#68C2FF;
+line-height:normal;
+margin-bottom:8px
+}
+#footer p {
+color:#EEE
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="header">
+    <h1>CFRemoteTree Demo</h1>
+    <p>Adobe ColdFusion, Sencha ExtJS, Saki's RemoteTreePanel and Joe Celko's Nested Set database model in perfect harmony</p>
+  </div>
+  <div id="main">
+    <div id="content">
+      <h2>INTRODUCTION</h2>
+      <p>I put this demo together for my fellow ColdFusion designers who, like me, have struggled to implement <strong>ExtJS</strong>, Saki's <strong>Ext.ux.tree.RemoteTreePanel</strong> extension and Joe Celko's <strong>Nested Set database model</strong> to represent tree-structured data in a CF environment. I've spent many hours researching and testing, and I've found very little clear documentation or examples of  how and what to do when it comes to the backend... particularly when you're talking about CF.  I'm hoping that by sharing my efforts, it will inspire others to do the same.  Maybe you'll even improve on what I've done... I've definitely left room for it.  =]</p>
+      <p>A word about my development environment: I use<strong> Adobe ColdFusion 8</strong> with a <strong>Microsoft SQL Server 2008</strong> DB. This is the environment I use at work, so I do all of my development under this setup to reduce the need to maintain multiple environments. Unfortunately, since I don't use any other DB servers, I'm unable to help those of you with different setups. However, if you are on an earlier, later or alternate CFML engine, you should be fine.  (I think... again, I can't test it, but let me know how it works for you). If you happen to be running another flavor of scripting language, I suggest you look at the additional resources at the bottom of this page. The <strong>nstrees library</strong> was a great help, especially in figuring out the node move logic. If you're ambitious and want to contribute to this demo, please feel free to email me.</p>
+      <p>I've purposely simplified the processing code for this demo to make it relatively easy to understand the database logic. There is plenty of room to enhance,  harden, optimize, secure, streamline, and so on. I'll leave that up to you. Remember, the purpose of this demo is to give you some basic tools to help you learn to implement this code in your own environment, not hand you a drop-in solution.</p>
+      <p><strong>Chris Chain | <em>sirveloz [at] gmail [dot] com</em></strong></p>
+      <h2>SETUP</h2>
+      <ol>
+        <li>Unzip this archive into the web root of your CF server. If you are using the built-in CF server, it should be C:\ColdFusion9\wwwroot. You should now have a folder called <strong>/cfremotetree</strong> in the root of your webserver.</li>
+        <li>Download and unzip <strong>ExtJS 3.3.0</strong> into <strong>/cfremotetree</strong>. There is a link to download the package in the credits section below. Your webroot should now contain the following files and folders:<br />
+          <ul style="margin:16px 24px">
+            <li>/cfremotetree</li>
+            <ul>
+              <li>/ext-3.3.0</li>
+              <ul>
+                <li><em>(all default install folders)</em></li>
+                <li class="file"><em>(all default install files)</em></li>
+              </ul>
+              <li class="file">Application.cfm</li>
+              <li class="file">COPYING</li>
+              <li class="file">COPYING.LESSER</li>
+              <li class="file">Ext.ux.tree.RemoteTreePanel.js</li>
+              <li class="file">index.html</li>
+              <li class="file">readme.txt</li>
+              <li class="file">tree.cfc</li>
+              <li class="file">tree.html</li>
+              <li class="file">tree.js</li>
+            </ul>
+            <p style="color:#666;font-size:11px"><em>If you've installed the files correctly, you should see cool ExtJS file and folder icons above when you view this page in a browser... neat!</em></p>
+          </ul>
+        </li>
+        <li>Now create a database in your SQL server called <strong>remotetree</strong>.</li>
+        <li>Add a new datasource called <strong>remotetree</strong> in the <strong>ColdFusion Administrator</strong> panel and point it to your shiny new database.</li>
+        <li><a href="tree.cfc?method=setupDB" target="_blank"><strong>Click here</strong></a> to run the setupDB function and create the <strong>tree</strong> table in your <strong>remotetree</strong> database and insert the sample data set. You should get a new window with the words <strong>Tree table successfully created!</strong>. You can re-run this function at any time to drop and recreate the table if you want to restore the default data set.</li>
+        <li>That should be it. Now go to <a href="tree.html" target="_blank"><strong>tree.html</strong></a> to try it out!</li>
+      </ol>
+      </p>
+      <h2>FINAL THOUGHTS</h2>
+      <p>The sample data set is from the article <em>Storing Hierarchical Data in a Database</em> by Gijs Van Tulder. There is a link to it in the <strong>Additional Resources</strong> section at the bottom of the page. There are quite a few good resources out there to help you learn about storing tree data in a relational database. The nested set model works well for me, since I'm using it to manage a menu system for our website that only a handful of people will be updating fairly infrequently. In this case, I want the maximum performance efficiency to be on the SELECT side of the database query process, rather than on the INSERT/UPDATE/DELETE operations. If you expect your application will be heavy on the write side as opposed to the read, you may want to look into other tree representation models such as the <strong>Materialized Path</strong> database model. A Google search will yield plenty of information for you to exhaust yourself with.</p>
+      <p>An associate of mine suggested that I include a generic open source license agreement to help support free software and ensure that everyone gets the credit they deserve for the work they do. I've licensed this work under the GNU LGPL, details are in the comments of the files I created. Personally, I want you to use this demo to help you create your own solution, not use this as production-ready source code. Like I stated above, it's simplified for educational purposes. I would never use this code in a production application without significant streamlining and security modifications.</p>
+      <p>Thanks for downloading and reading this, I hope it helps you. If you like this demo, find problems with it or you just want to contribute more code to it, please feel free to email me at sirveloz [at] gmail [dot] com.</p>
+      <p style="font-size:11px;color:#666"><strong>Ext.ux.tree.RemoteTreePanel</strong> is copyright 2008 Jozef Sakáloš. I have included a slightly modified version of his extension with this distribution for compatibility with ExtJS 3.3.0. The complete extension and documentation is available from the link in the <strong>Credits</strong> section below.</p>
+    </div>
+  </div>
+  <div id="footer">
+    <h2>Credits</h2>
+    <p>Brilliant work from brilliant people...</p>
+    <dl>
+      <dt>Adobe ColdFusion</dt>
+      <dd><a href="http://www.adobe.com/products/coldfusion" target="_blank">http://www.adobe.com/products/coldfusion</a></dd>
+      <dt>ExtJS | <em>Sencha Inc.</em></dt>
+      <dd><a href="http://www.sencha.com/products/js/download.php" target="_blank">http://www.sencha.com/products/js/download.php</a></dd>
+      <dt>Ext.ux.tree.RemoteTreePanel | <em>Jozef Sakáloš (Saki)</em></dt>
+      <dd><a href="http://remotetree.extjs.eu" target="_blank">http://remotetree.extjs.eu</a></dd>
+      <dt>Trees in SQL | <em>Joe Celko</em></dt>
+      <dd><a href="http://intelligent-enterprise.informationweek.com/001020/celko1_1.jhtml" target="_blank">http://intelligent-enterprise.informationweek.com/001020/celko1_1.jhtml</a></dd>
+      <dt>Silk Icon Set | <em>Mark James</em></dt>
+      <dd><a href="http://famfamfam.com/lab/icons/silk/" target="_blank">http://famfamfam.com/lab/icons/silk/</a></dd>
+    </dl>
+    <h2>Additional Resources</h2>
+    <p>I highly recommend these articles and libraries to help understand the Modified Preorder Tree Traversal Algorithm (Nested Set) database model, the theory behind it, and how to use it.</p>
+    <dl>
+      <dt>Storing Hierarchical Data in a Database | <em>Gijs Van Tulder</em></dt>
+      <dd><a href="http://articles.sitepoint.com/article/hierarchical-data-database" target="_blank">http://articles.sitepoint.com/article/hierarchical-data-database</a></dd>
+      <dt>Managing Hierarchical Data in MySQL | <em>Mike Hillyer</em></dt>
+      <dd><a href="http://dev.mysql.com/tech-resources/articles/hierarchical-data.html" target="_blank">http://dev.mysql.com/tech-resources/articles/hierarchical-data.html</a></dd>
+      <dt>ORM and the Nested Set Model | <em>John Whish</em></dt>
+      <dd><a href="http://www.aliaspooryorik.com/blog/index.cfm/e/posts.details/post/240" target="_blank">http://www.aliaspooryorik.com/blog/index.cfm/e/posts.details/post/240</a></dd>
+      <dt>nstrees library for PHP | <em>Rolf Brugger</em></dt>
+      <dd><a href="http://www.edutech.ch/contribution/nstrees/" target="_blank">http://www.edutech.ch/contribution/nstrees/</a></dd>
+      <dt>nstrees library for CFML | <em>Kevan Stannard</em></dt>
+      <dd><a href="http://nstree.riaforge.org/" target="_blank">http://nstree.riaforge.org/</a></dd>
+    </dl>
+  </div>
+</div>
+</body>
+</html>
